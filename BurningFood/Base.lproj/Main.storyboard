@@ -20,9 +20,6 @@
                         <color key="backgroundColor" red="0.68627450980392157" green="0.40784313725490196" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="jdu-9S-6PY"/>
-                    <connections>
-                        <segue destination="h2M-qb-UFC" kind="show" identifier="segueToMapViewController" id="deH-Jh-Wag"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -52,26 +49,36 @@
                             <constraint firstItem="tgn-hB-hvu" firstAttribute="top" secondItem="AEi-Hv-pzh" secondAttribute="topMargin" id="pqR-uj-38k"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="s1j-4i-N96"/>
+                    <navigationItem key="navigationItem" id="s1j-4i-N96">
+                        <nil key="title"/>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="d8G-is-Hfy">
+                            <rect key="frame" x="180" y="7" width="240" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Refresh map"/>
+                            <connections>
+                                <action selector="refreshPlaces:" destination="h2M-qb-UFC" eventType="touchUpInside" id="E7I-gg-jyk"/>
+                            </connections>
+                        </button>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="tgn-hB-hvu" id="KFr-mz-Ebr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hc0-w1-Yd2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2471" y="418"/>
+            <point key="canvasLocation" x="2503" y="1136"/>
         </scene>
-        <!--Item-->
+        <!--Cards-->
         <scene sceneID="qHL-Ga-3RN">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nH4-D3-ath" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="rdU-Cn-e8D"/>
+                    <tabBarItem key="tabBarItem" tag="-1" title="Cards" image="icon-cards" selectedImage="icon-cards" id="rdU-Cn-e8D"/>
                     <toolbarItems/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xsc-jE-tRh">
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="xsc-jE-tRh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="1" green="0.68627450980000004" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -82,27 +89,121 @@
             </objects>
             <point key="canvasLocation" x="1117" y="418"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Liked Cards Table View Controller-->
+        <scene sceneID="ZbV-6S-0I3">
+            <objects>
+                <tableViewController id="eNS-cd-Qvh" customClass="LikedCardsTableViewController" customModule="BurningFood" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="147" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZMz-HV-ACB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.68627450980000004" green="0.40784313729999999" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cardCells" rowHeight="147" id="cEn-9c-0OY" customClass="LikedCardsTableViewCell" customModule="BurningFood" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="600" height="147"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cEn-9c-0OY" id="dF9-AZ-029">
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="146.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fey-3S-dCC">
+                                            <rect key="frame" x="8" y="8" width="142" height="130.5"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Meal:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpr-4e-izj">
+                                            <rect key="frame" x="158" y="8" width="112" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agQ-8s-eHh">
+                                            <rect key="frame" x="158" y="37" width="112" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Italian" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0h-wZ-yW2">
+                                            <rect key="frame" x="278" y="37" width="112" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pizza" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PsG-Xh-6yb">
+                                            <rect key="frame" x="278" y="8" width="112" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.68627450980000004" green="0.40784313729999999" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="imgView_meal" destination="fey-3S-dCC" id="ae2-1j-Epa"/>
+                                    <outlet property="lbl_category" destination="l0h-wZ-yW2" id="LHV-9r-Wh0"/>
+                                    <outlet property="lbl_mealName" destination="PsG-Xh-6yb" id="Ur5-SN-CqE"/>
+                                    <segue destination="h2M-qb-UFC" kind="show" identifier="segueToMapView" id="zxk-4O-iOr"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="eNS-cd-Qvh" id="hus-Ux-Fd6"/>
+                            <outlet property="delegate" destination="eNS-cd-Qvh" id="1TP-XK-SwM"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Qx6-AI-QIc"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="prE-x2-ECB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1796" y="1136"/>
+        </scene>
+        <!--Tab Bar View Controller-->
         <scene sceneID="jzC-8p-Y1N">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="mgB-3o-vIb" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="mgB-3o-vIb" customClass="TabBarViewController" customModule="BurningFood" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="CFq-bS-1dF">
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="CFq-bS-1dF">
                         <rect key="frame" x="0.0" y="0.0" width="0.0" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <color key="barTintColor" red="1" green="0.68627450980392157" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                         <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
                         <segue destination="nH4-D3-ath" kind="relationship" relationship="viewControllers" id="Fyl-Rf-tPz"/>
+                        <segue destination="Ifr-su-M5l" kind="relationship" relationship="viewControllers" id="JLf-VK-zrA"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UaG-iX-DEz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="439" y="418"/>
+            <point key="canvasLocation" x="411" y="768"/>
+        </scene>
+        <!--Meals-->
+        <scene sceneID="ni9-CO-zgP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ifr-su-M5l" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Meals" image="icon-pizza" id="JXm-qM-CUf">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="0yq-pF-3ce">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eNS-cd-Qvh" kind="relationship" relationship="rootViewController" id="01J-xJ-qp2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aUF-qv-kTQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1122" y="1136"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon-cards" width="40" height="33"/>
+        <image name="icon-pizza" width="30" height="30"/>
+    </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
 </document>

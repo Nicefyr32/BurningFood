@@ -11,6 +11,7 @@ import UIKit
 class CardViewController: UIViewController {
     
     var mealService = MealService()
+    var coreDataService = CoreDataService()
     
     var meals: [Meal] = []
     var meal = Meal()
@@ -23,13 +24,25 @@ class CardViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         // Add a gradient effect
-        let gradient: CAGradientLayer = CAGradientLayer()
-        gradient.frame = self.view.bounds
-        gradient.colors = [UIColor(red:0.95, green:0.56, blue:0.30, alpha:1.0).CGColor, UIColor(red:0.95, green:0.56, blue:0.30, alpha:1.0).CGColor]
-        self.view.layer.insertSublayer(gradient, atIndex: 0)
+//        let gradient: CAGradientLayer = CAGradientLayer()
+//        gradient.frame = self.view.bounds
+//        gradient.colors = [UIColor(red:0.95, green:0.56, blue:0.30, alpha:1.0).CGColor, UIColor(red:0.95, green:0.56, blue:0.30, alpha:1.0).CGColor]
+//        self.view.layer.insertSublayer(gradient, atIndex: 0)
+        
+        updateLikedBadge()
         
         // adds cards to the view
         addCards()
+        
+    }
+    
+    func updateLikedBadge(){
+        
+        let likedMealCount = coreDataService.getLikedNumber()
+        
+        if likedMealCount != 0 {
+            (tabBarController!.tabBar.items![1] ).badgeValue = "\(likedMealCount)"
+        }
         
     }
 
@@ -41,7 +54,7 @@ class CardViewController: UIViewController {
     func addCards() {
         meals = mealService.getMeals()
         
-        for (meal) in meals {
+        for meal in meals {
             currentCardView = CardView (frame: self.view.frame, meal: meal, bounds: self.view.bounds)
             self.cardViews.append(currentCardView)
         }
@@ -60,8 +73,10 @@ class CardViewController: UIViewController {
             // Determine if we need to swipe off or return to center
             if currentCardView.center.x / self.view.bounds.maxX > 0.8 {
                 self.meal = currentCardView.meal
-                performSegueWithIdentifier("segueToMapViewController", sender: self)
+                coreDataService.saveMeal(self.meal)
                 determineJudgement(true)
+                updateLikedBadge()
+                NSNotificationCenter.defaultCenter().postNotificationName("refreshMyTableView", object: nil)
             }
             else if currentCardView.center.x / self.view.bounds.maxX < 0.2 {
                 determineJudgement(false)
@@ -84,30 +99,13 @@ class CardViewController: UIViewController {
         // Handle when we have no more matches
         cardViews.removeAtIndex(cardViews.count - 1)
         if cardViews.count - 1 < 0 {
-            let meal = Meal(category: "none", name: "none", photoURL: "nomore")
-            let noMoreView = CardView(
-                frame: self.view.frame,
-                meal: meal,
-                bounds: self.view.bounds
-            )
-            cardViews.append(noMoreView)
-            self.view.addSubview(noMoreView)
+            return
         } else {
             // Set the new current question to the next one
             currentCardView = cardViews.last!
         }
         
     }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if(segue.identifier == "segueToMapViewController") {
-            let segueToMapViewController = segue.destinationViewController as? MapViewController
-            
-            segueToMapViewController?.meal = currentCardView.meal
-            
-        }
-    }
-    
     
 
 }

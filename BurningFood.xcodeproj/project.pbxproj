@@ -9,7 +9,11 @@
 /* Begin PBXBuildFile section */
 		0D2EF1D41CE3B5CD00BB9AE0 /* MealService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2EF1D31CE3B5CD00BB9AE0 /* MealService.swift */; };
 		0D461D261CE52AA700638C13 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D461D251CE52AA700638C13 /* MapViewController.swift */; };
-		0D461D281CE5406D00638C13 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D461D271CE5406D00638C13 /* Place.swift */; };
+		0D5B343F1CEF7D4200F69CCE /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5B343E1CEF7D4200F69CCE /* CoreDataService.swift */; };
+		0D5B34561CEF80EC00F69CCE /* LikedMeal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5B34541CEF80EC00F69CCE /* LikedMeal+CoreDataProperties.swift */; };
+		0D5B34571CEF80EC00F69CCE /* LikedMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5B34551CEF80EC00F69CCE /* LikedMeal.swift */; };
+		0D5B34591CEF9DA800F69CCE /* LikedCardsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5B34581CEF9DA800F69CCE /* LikedCardsTableViewCell.swift */; };
+		0D5B345B1CEF9DCF00F69CCE /* LikedCardsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5B345A1CEF9DCF00F69CCE /* LikedCardsTableViewController.swift */; };
 		0D6CD5FD1CE2982100969D1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6CD5FC1CE2982100969D1B /* AppDelegate.swift */; };
 		0D6CD5FF1CE2982100969D1B /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6CD5FE1CE2982100969D1B /* CardViewController.swift */; };
 		0D6CD6021CE2982100969D1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D6CD6001CE2982100969D1B /* Main.storyboard */; };
@@ -18,12 +22,18 @@
 		0D6CD60A1CE2982100969D1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D6CD6081CE2982100969D1B /* LaunchScreen.storyboard */; };
 		0D6CD6121CE299BD00969D1B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6CD6111CE299BD00969D1B /* CardView.swift */; };
 		0D6CD6141CE2A06000969D1B /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6CD6131CE2A06000969D1B /* Meal.swift */; };
+		0DDC9CBC1CEFC70700C11923 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDC9CBB1CEFC70700C11923 /* TabBarViewController.swift */; };
+		0DDC9CC01CF07C5400C11923 /* CustomPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDC9CBF1CF07C5400C11923 /* CustomPointAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0D2EF1D31CE3B5CD00BB9AE0 /* MealService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealService.swift; sourceTree = "<group>"; };
 		0D461D251CE52AA700638C13 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		0D461D271CE5406D00638C13 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		0D5B343E1CEF7D4200F69CCE /* CoreDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		0D5B34541CEF80EC00F69CCE /* LikedMeal+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "LikedMeal+CoreDataProperties.swift"; path = "../LikedMeal+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0D5B34551CEF80EC00F69CCE /* LikedMeal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LikedMeal.swift; path = ../LikedMeal.swift; sourceTree = "<group>"; };
+		0D5B34581CEF9DA800F69CCE /* LikedCardsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikedCardsTableViewCell.swift; sourceTree = "<group>"; };
+		0D5B345A1CEF9DCF00F69CCE /* LikedCardsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikedCardsTableViewController.swift; sourceTree = "<group>"; };
 		0D6CD5F91CE2982100969D1B /* BurningFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BurningFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D6CD5FC1CE2982100969D1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D6CD5FE1CE2982100969D1B /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
@@ -34,6 +44,8 @@
 		0D6CD60B1CE2982100969D1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D6CD6111CE299BD00969D1B /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		0D6CD6131CE2A06000969D1B /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		0DDC9CBB1CEFC70700C11923 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		0DDC9CBF1CF07C5400C11923 /* CustomPointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPointAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +63,38 @@
 			isa = PBXGroup;
 			children = (
 				0D2EF1D31CE3B5CD00BB9AE0 /* MealService.swift */,
+				0D5B343E1CEF7D4200F69CCE /* CoreDataService.swift */,
 			);
 			name = Services;
+			sourceTree = "<group>";
+		};
+		0D5B343B1CEF0C5B00F69CCE /* CardTable */ = {
+			isa = PBXGroup;
+			children = (
+				0D461D251CE52AA700638C13 /* MapViewController.swift */,
+				0D5B34581CEF9DA800F69CCE /* LikedCardsTableViewCell.swift */,
+				0D5B345A1CEF9DCF00F69CCE /* LikedCardsTableViewController.swift */,
+			);
+			name = CardTable;
+			sourceTree = "<group>";
+		};
+		0D5B343C1CEF0C7D00F69CCE /* SwipeCards */ = {
+			isa = PBXGroup;
+			children = (
+				0D6CD5FE1CE2982100969D1B /* CardViewController.swift */,
+				0D6CD6111CE299BD00969D1B /* CardView.swift */,
+			);
+			name = SwipeCards;
+			sourceTree = "<group>";
+		};
+		0D5B343D1CEF0D1700F69CCE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0D5B34541CEF80EC00F69CCE /* LikedMeal+CoreDataProperties.swift */,
+				0D5B34551CEF80EC00F69CCE /* LikedMeal.swift */,
+				0D6CD6131CE2A06000969D1B /* Meal.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		0D6CD5F01CE2982100969D1B = {
@@ -74,18 +116,18 @@
 		0D6CD5FB1CE2982100969D1B /* BurningFood */ = {
 			isa = PBXGroup;
 			children = (
-				0D461D241CE5091400638C13 /* Services */,
 				0D6CD5FC1CE2982100969D1B /* AppDelegate.swift */,
-				0D6CD5FE1CE2982100969D1B /* CardViewController.swift */,
-				0D6CD6111CE299BD00969D1B /* CardView.swift */,
-				0D461D251CE52AA700638C13 /* MapViewController.swift */,
-				0D461D271CE5406D00638C13 /* Place.swift */,
-				0D6CD6131CE2A06000969D1B /* Meal.swift */,
+				0DDC9CBB1CEFC70700C11923 /* TabBarViewController.swift */,
+				0D5B343D1CEF0D1700F69CCE /* Model */,
+				0D5B343C1CEF0C7D00F69CCE /* SwipeCards */,
+				0D5B343B1CEF0C5B00F69CCE /* CardTable */,
+				0D461D241CE5091400638C13 /* Services */,
 				0D6CD6001CE2982100969D1B /* Main.storyboard */,
 				0D6CD6061CE2982100969D1B /* Assets.xcassets */,
 				0D6CD6081CE2982100969D1B /* LaunchScreen.storyboard */,
 				0D6CD60B1CE2982100969D1B /* Info.plist */,
 				0D6CD6031CE2982100969D1B /* BurningFood.xcdatamodeld */,
+				0DDC9CBF1CF07C5400C11923 /* CustomPointAnnotation.swift */,
 			);
 			path = BurningFood;
 			sourceTree = "<group>";
@@ -161,12 +203,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DDC9CC01CF07C5400C11923 /* CustomPointAnnotation.swift in Sources */,
 				0D6CD5FF1CE2982100969D1B /* CardViewController.swift in Sources */,
+				0D5B34591CEF9DA800F69CCE /* LikedCardsTableViewCell.swift in Sources */,
 				0D6CD6051CE2982100969D1B /* BurningFood.xcdatamodeld in Sources */,
+				0D5B345B1CEF9DCF00F69CCE /* LikedCardsTableViewController.swift in Sources */,
 				0D2EF1D41CE3B5CD00BB9AE0 /* MealService.swift in Sources */,
-				0D461D281CE5406D00638C13 /* Place.swift in Sources */,
 				0D6CD6141CE2A06000969D1B /* Meal.swift in Sources */,
+				0D5B34561CEF80EC00F69CCE /* LikedMeal+CoreDataProperties.swift in Sources */,
+				0D5B343F1CEF7D4200F69CCE /* CoreDataService.swift in Sources */,
+				0D5B34571CEF80EC00F69CCE /* LikedMeal.swift in Sources */,
 				0D6CD6121CE299BD00969D1B /* CardView.swift in Sources */,
+				0DDC9CBC1CEFC70700C11923 /* TabBarViewController.swift in Sources */,
 				0D6CD5FD1CE2982100969D1B /* AppDelegate.swift in Sources */,
 				0D461D261CE52AA700638C13 /* MapViewController.swift in Sources */,
 			);

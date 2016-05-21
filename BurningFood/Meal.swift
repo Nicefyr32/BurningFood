@@ -13,11 +13,13 @@ class Meal {
     var category: String = ""
     var name: String = ""
     var photoURL: String = ""
+    var searchString: String = ""
     
-    init(category: String, name: String, photoURL: String){
+    init(searchString: String, category: String, name: String, photoURL: String){
         self.category = category
         self.name = name
         self.photoURL = photoURL
+        self.searchString = searchString
     }
     
     init (){
