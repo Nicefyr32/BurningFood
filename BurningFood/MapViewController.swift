@@ -124,9 +124,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         let cpa = annotation as! CustomPointAnnotation
         
+        let image = UIImage(named: cpa.imageName)
         
-        anView!.image = UIImage(named: cpa.imageName)
-        
+        anView!.image = image
         
         
         return anView
@@ -154,7 +154,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                 customAnnotation.coordinate = item.placemark.coordinate // assign koordinat
                 customAnnotation.title = item.name // assign titel
                 customAnnotation.subtitle = item.placemark.title
-                customAnnotation.imageName = "icon-pizza"
+                customAnnotation.imageName = "annotation-icon"
 
                 //customAnnotation.accessibilityFrame
                 

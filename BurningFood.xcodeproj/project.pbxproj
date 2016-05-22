@@ -22,11 +22,15 @@
 		0D6CD60A1CE2982100969D1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D6CD6081CE2982100969D1B /* LaunchScreen.storyboard */; };
 		0D6CD6121CE299BD00969D1B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6CD6111CE299BD00969D1B /* CardView.swift */; };
 		0D6CD6141CE2A06000969D1B /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6CD6131CE2A06000969D1B /* Meal.swift */; };
+		0D953EF81CF1CFB400A37E3E /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D953EF71CF1CFB400A37E3E /* CategoryTableViewCell.swift */; };
+		0D953EFA1CF1CFD700A37E3E /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D953EF91CF1CFD700A37E3E /* CategoryTableViewController.swift */; };
 		0DDC9CBC1CEFC70700C11923 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDC9CBB1CEFC70700C11923 /* TabBarViewController.swift */; };
 		0DDC9CC01CF07C5400C11923 /* CustomPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDC9CBF1CF07C5400C11923 /* CustomPointAnnotation.swift */; };
+		555300854F9FA9E2B94E7B2E /* Pods_BurningFood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050E2831989B88E967F68D91 /* Pods_BurningFood.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		050E2831989B88E967F68D91 /* Pods_BurningFood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BurningFood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D2EF1D31CE3B5CD00BB9AE0 /* MealService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealService.swift; sourceTree = "<group>"; };
 		0D461D251CE52AA700638C13 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		0D5B343E1CEF7D4200F69CCE /* CoreDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
@@ -44,8 +48,12 @@
 		0D6CD60B1CE2982100969D1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D6CD6111CE299BD00969D1B /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		0D6CD6131CE2A06000969D1B /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		0D953EF71CF1CFB400A37E3E /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		0D953EF91CF1CFD700A37E3E /* CategoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		0DDC9CBB1CEFC70700C11923 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		0DDC9CBF1CF07C5400C11923 /* CustomPointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPointAnnotation.swift; sourceTree = "<group>"; };
+		574F25D79612660B7A872FA3 /* Pods-BurningFood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BurningFood.release.xcconfig"; path = "Pods/Target Support Files/Pods-BurningFood/Pods-BurningFood.release.xcconfig"; sourceTree = "<group>"; };
+		AF66D2D1EDA6CB119AF36876 /* Pods-BurningFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BurningFood.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BurningFood/Pods-BurningFood.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				555300854F9FA9E2B94E7B2E /* Pods_BurningFood.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,7 +80,6 @@
 		0D5B343B1CEF0C5B00F69CCE /* CardTable */ = {
 			isa = PBXGroup;
 			children = (
-				0D461D251CE52AA700638C13 /* MapViewController.swift */,
 				0D5B34581CEF9DA800F69CCE /* LikedCardsTableViewCell.swift */,
 				0D5B345A1CEF9DCF00F69CCE /* LikedCardsTableViewController.swift */,
 			);
@@ -102,6 +110,8 @@
 			children = (
 				0D6CD5FB1CE2982100969D1B /* BurningFood */,
 				0D6CD5FA1CE2982100969D1B /* Products */,
+				3858FAF9D867F5D4665A8781 /* Pods */,
+				966E4554A19CC064AC35F055 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,15 +131,51 @@
 				0D5B343D1CEF0D1700F69CCE /* Model */,
 				0D5B343C1CEF0C7D00F69CCE /* SwipeCards */,
 				0D5B343B1CEF0C5B00F69CCE /* CardTable */,
+				0D953EF51CF1CBC700A37E3E /* Map */,
+				0D953EF61CF1CC2000A37E3E /* PlacesTable */,
 				0D461D241CE5091400638C13 /* Services */,
 				0D6CD6001CE2982100969D1B /* Main.storyboard */,
 				0D6CD6061CE2982100969D1B /* Assets.xcassets */,
 				0D6CD6081CE2982100969D1B /* LaunchScreen.storyboard */,
 				0D6CD60B1CE2982100969D1B /* Info.plist */,
 				0D6CD6031CE2982100969D1B /* BurningFood.xcdatamodeld */,
-				0DDC9CBF1CF07C5400C11923 /* CustomPointAnnotation.swift */,
 			);
 			path = BurningFood;
+			sourceTree = "<group>";
+		};
+		0D953EF51CF1CBC700A37E3E /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				0DDC9CBF1CF07C5400C11923 /* CustomPointAnnotation.swift */,
+				0D461D251CE52AA700638C13 /* MapViewController.swift */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		0D953EF61CF1CC2000A37E3E /* PlacesTable */ = {
+			isa = PBXGroup;
+			children = (
+				0D953EF71CF1CFB400A37E3E /* CategoryTableViewCell.swift */,
+				0D953EF91CF1CFD700A37E3E /* CategoryTableViewController.swift */,
+			);
+			name = PlacesTable;
+			sourceTree = "<group>";
+		};
+		3858FAF9D867F5D4665A8781 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AF66D2D1EDA6CB119AF36876 /* Pods-BurningFood.debug.xcconfig */,
+				574F25D79612660B7A872FA3 /* Pods-BurningFood.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		966E4554A19CC064AC35F055 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				050E2831989B88E967F68D91 /* Pods_BurningFood.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,9 +185,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0D6CD60E1CE2982100969D1B /* Build configuration list for PBXNativeTarget "BurningFood" */;
 			buildPhases = (
+				3D0C6AD129FCCA152A60CD45 /* 📦 Check Pods Manifest.lock */,
 				0D6CD5F51CE2982100969D1B /* Sources */,
 				0D6CD5F61CE2982100969D1B /* Frameworks */,
 				0D6CD5F71CE2982100969D1B /* Resources */,
+				99E688EADF39FFE02A011E6A /* 📦 Embed Pods Frameworks */,
+				9F8F21129E252191A0CFAE3D /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -198,6 +247,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3D0C6AD129FCCA152A60CD45 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		99E688EADF39FFE02A011E6A /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BurningFood/Pods-BurningFood-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F8F21129E252191A0CFAE3D /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BurningFood/Pods-BurningFood-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0D6CD5F51CE2982100969D1B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -206,8 +303,10 @@
 				0DDC9CC01CF07C5400C11923 /* CustomPointAnnotation.swift in Sources */,
 				0D6CD5FF1CE2982100969D1B /* CardViewController.swift in Sources */,
 				0D5B34591CEF9DA800F69CCE /* LikedCardsTableViewCell.swift in Sources */,
+				0D953EFA1CF1CFD700A37E3E /* CategoryTableViewController.swift in Sources */,
 				0D6CD6051CE2982100969D1B /* BurningFood.xcdatamodeld in Sources */,
 				0D5B345B1CEF9DCF00F69CCE /* LikedCardsTableViewController.swift in Sources */,
+				0D953EF81CF1CFB400A37E3E /* CategoryTableViewCell.swift in Sources */,
 				0D2EF1D41CE3B5CD00BB9AE0 /* MealService.swift in Sources */,
 				0D6CD6141CE2A06000969D1B /* Meal.swift in Sources */,
 				0D5B34561CEF80EC00F69CCE /* LikedMeal+CoreDataProperties.swift in Sources */,
@@ -327,6 +426,7 @@
 		};
 		0D6CD60F1CE2982100969D1B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF66D2D1EDA6CB119AF36876 /* Pods-BurningFood.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BurningFood/Info.plist;
@@ -338,6 +438,7 @@
 		};
 		0D6CD6101CE2982100969D1B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 574F25D79612660B7A872FA3 /* Pods-BurningFood.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BurningFood/Info.plist;

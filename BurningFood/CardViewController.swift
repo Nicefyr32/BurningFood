@@ -31,6 +31,7 @@ class CardViewController: UIViewController {
         
         updateLikedBadge()
         
+        
         // adds cards to the view
         addCards()
         

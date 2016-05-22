@@ -15,10 +15,10 @@ class MealService {
     let meal3 = Meal(searchString: "pizza", category: "Italian", name: "Lasange", photoURL: "lasange")
     let meal4 = Meal(searchString: "pizza", category: "American", name: "Fries", photoURL: "fries")
     let meal5 = Meal(searchString: "cafe", category: "Salat", name: "Salat", photoURL: "salat")
-    
-    
-    let meal6 = Meal(searchString: "pizza", category: "American", name: "Fries", photoURL: "fries")
-    let meal7 = Meal(searchString: "pizza", category: "American", name: "Fries", photoURL: "fries")
+    let meal6 = Meal(searchString: "mexican", category: "Mexican", name: "Taco", photoURL: "taco")
+    let meal7 = Meal(searchString: "cake", category: "Dessert", name: "Cake", photoURL: "cake")
+    let meal8 = Meal(searchString: "hotdog", category: "Street food", name: "Hotdog", photoURL: "hotdog")
+
     
     var meals: [Meal] = []
     
@@ -29,6 +29,9 @@ class MealService {
         meals.append(meal3)
         meals.append(meal4)
         meals.append(meal5)
+        meals.append(meal6)
+        meals.append(meal7)
+        meals.append(meal8)
         
         return meals
     }

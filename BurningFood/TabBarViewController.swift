@@ -9,21 +9,35 @@
 import UIKit
 
 class TabBarViewController: UITabBarController, UINavigationControllerDelegate {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         // Sets the default color of the icon of the selected UITabBarItem and Title
-        UITabBar.appearance().tintColor = UIColor.whiteColor()
-    
+        
+        UITabBar.appearance().tintColor = UIColor(red: 237.0/255.0, green: 67.0/255.0, blue: 55.0/255.0, alpha: 1)
+        
+        for item in self.tabBar.items! as [UITabBarItem]
+        {
+            //item.image = item.selectedImage!.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
+            
+            item.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.whiteColor()], forState: UIControlState.Selected)
+            item.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Futura", size: 10.0)!], forState: UIControlState.Normal)
+            item.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Futura", size: 10.0)!], forState: UIControlState.Disabled)
 
+        }
+        
         // Do any additional setup after loading the view.
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+    
     
 
     /*

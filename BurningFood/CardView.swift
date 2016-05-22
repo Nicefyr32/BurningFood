@@ -65,11 +65,14 @@ class CardView: UIView {
         lbl_titleLabel.center = CGPointMake(115, 330)
         lbl_titleLabel.textAlignment = NSTextAlignment.Left
         lbl_titleLabel.text = "Meal:"
+        lbl_titleLabel.font = UIFont(name: "Futura", size: 17.0)
         cardView.addSubview(lbl_titleLabel)
+        
         let lbl_title = UILabel(frame: CGRectMake(0, 0, 200, 21))
         lbl_title.center = CGPointMake(205, 330)
         lbl_title.textAlignment = NSTextAlignment.Right
         lbl_title.text = meal.name
+        lbl_title.font = UIFont(name: "Futura", size: 17.0)
         cardView.addSubview(lbl_title)
 
         // Category label
@@ -77,11 +80,14 @@ class CardView: UIView {
         lbl_categoryLabel.center = CGPointMake(115, 360)
         lbl_categoryLabel.textAlignment = NSTextAlignment.Left
         lbl_categoryLabel.text = "Category:"
+        lbl_categoryLabel.font = UIFont(name: "Futura", size: 17.0)
         cardView.addSubview(lbl_categoryLabel)
+        
         let lbl_category = UILabel(frame: CGRectMake(0, 0, 200, 21))
         lbl_category.center = CGPointMake(205, 360)
         lbl_category.textAlignment = NSTextAlignment.Right
         lbl_category.text = meal.category
+        lbl_category.font = UIFont(name: "Futura", size: 17.0)
         cardView.addSubview(lbl_category)
         
         self.addSubview(cardView)
