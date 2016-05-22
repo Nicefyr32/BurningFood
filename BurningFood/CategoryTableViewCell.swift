@@ -10,6 +10,11 @@ import UIKit
 
 class CategoryTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var imgView_flag: UIImageView!
+    
+    @IBOutlet weak var lbl_country: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

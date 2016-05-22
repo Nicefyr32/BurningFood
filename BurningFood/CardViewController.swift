@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Font_Awesome_Swift
 
 class CardViewController: UIViewController {
     
@@ -44,6 +45,9 @@ class CardViewController: UIViewController {
         if likedMealCount != 0 {
             (tabBarController!.tabBar.items![1] ).badgeValue = "\(likedMealCount)"
         }
+        
+        (tabBarController!.tabBar.items![1]).image = UIImage(icon: FAType.FACutlery, size: CGSize(width: 35, height: 35))
+        (tabBarController!.tabBar.items![2]).image = UIImage(icon: FAType.FABars, size: CGSize(width: 35, height: 35))
         
     }
 

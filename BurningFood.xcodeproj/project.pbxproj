@@ -24,6 +24,8 @@
 		0D6CD6141CE2A06000969D1B /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6CD6131CE2A06000969D1B /* Meal.swift */; };
 		0D953EF81CF1CFB400A37E3E /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D953EF71CF1CFB400A37E3E /* CategoryTableViewCell.swift */; };
 		0D953EFA1CF1CFD700A37E3E /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D953EF91CF1CFD700A37E3E /* CategoryTableViewController.swift */; };
+		0D953EFC1CF1D6CF00A37E3E /* CategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D953EFB1CF1D6CF00A37E3E /* CategoryService.swift */; };
+		0D953EFE1CF1D75000A37E3E /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D953EFD1CF1D75000A37E3E /* Category.swift */; };
 		0DDC9CBC1CEFC70700C11923 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDC9CBB1CEFC70700C11923 /* TabBarViewController.swift */; };
 		0DDC9CC01CF07C5400C11923 /* CustomPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDC9CBF1CF07C5400C11923 /* CustomPointAnnotation.swift */; };
 		555300854F9FA9E2B94E7B2E /* Pods_BurningFood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050E2831989B88E967F68D91 /* Pods_BurningFood.framework */; };
@@ -50,6 +52,8 @@
 		0D6CD6131CE2A06000969D1B /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		0D953EF71CF1CFB400A37E3E /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		0D953EF91CF1CFD700A37E3E /* CategoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
+		0D953EFB1CF1D6CF00A37E3E /* CategoryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryService.swift; sourceTree = "<group>"; };
+		0D953EFD1CF1D75000A37E3E /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		0DDC9CBB1CEFC70700C11923 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		0DDC9CBF1CF07C5400C11923 /* CustomPointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPointAnnotation.swift; sourceTree = "<group>"; };
 		574F25D79612660B7A872FA3 /* Pods-BurningFood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BurningFood.release.xcconfig"; path = "Pods/Target Support Files/Pods-BurningFood/Pods-BurningFood.release.xcconfig"; sourceTree = "<group>"; };
@@ -73,6 +77,7 @@
 			children = (
 				0D2EF1D31CE3B5CD00BB9AE0 /* MealService.swift */,
 				0D5B343E1CEF7D4200F69CCE /* CoreDataService.swift */,
+				0D953EFB1CF1D6CF00A37E3E /* CategoryService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -101,6 +106,7 @@
 				0D5B34541CEF80EC00F69CCE /* LikedMeal+CoreDataProperties.swift */,
 				0D5B34551CEF80EC00F69CCE /* LikedMeal.swift */,
 				0D6CD6131CE2A06000969D1B /* Meal.swift */,
+				0D953EFD1CF1D75000A37E3E /* Category.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -305,6 +311,7 @@
 				0D5B34591CEF9DA800F69CCE /* LikedCardsTableViewCell.swift in Sources */,
 				0D953EFA1CF1CFD700A37E3E /* CategoryTableViewController.swift in Sources */,
 				0D6CD6051CE2982100969D1B /* BurningFood.xcdatamodeld in Sources */,
+				0D953EFE1CF1D75000A37E3E /* Category.swift in Sources */,
 				0D5B345B1CEF9DCF00F69CCE /* LikedCardsTableViewController.swift in Sources */,
 				0D953EF81CF1CFB400A37E3E /* CategoryTableViewCell.swift in Sources */,
 				0D2EF1D41CE3B5CD00BB9AE0 /* MealService.swift in Sources */,
@@ -314,6 +321,7 @@
 				0D5B34571CEF80EC00F69CCE /* LikedMeal.swift in Sources */,
 				0D6CD6121CE299BD00969D1B /* CardView.swift in Sources */,
 				0DDC9CBC1CEFC70700C11923 /* TabBarViewController.swift in Sources */,
+				0D953EFC1CF1D6CF00A37E3E /* CategoryService.swift in Sources */,
 				0D6CD5FD1CE2982100969D1B /* AppDelegate.swift in Sources */,
 				0D461D261CE52AA700638C13 /* MapViewController.swift in Sources */,
 			);

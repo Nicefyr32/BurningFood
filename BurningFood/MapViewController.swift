@@ -9,9 +9,11 @@
 import UIKit
 import MapKit
 import CoreLocation
+import Font_Awesome_Swift
 
 class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
+    @IBOutlet weak var btn_refreshPlacesOutlet: UIBarButtonItem!
     
     @IBAction func refreshPlaces(sender: UIButton) {
         refreshPlaces()
@@ -35,6 +37,11 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         super.viewDidLoad()
 
         mapView.delegate = self
+        
+
+        self.navigationItem.rightBarButtonItem?.image = UIImage(icon: FAType.FARefresh, size: CGSize(width: 30, height: 30))
+        
+        
         
         // sets the delegate to be self
         locationManager.delegate = self
